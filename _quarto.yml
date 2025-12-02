@@ -1,8 +1,9 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "Website Canavan"
+  title: "Susan Canavan"
   navbar:
     left:
       - href: index.qmd
@@ -11,11 +12,8 @@ website:
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
     css: styles.css
     toc: true
 
 editor: visual
-
