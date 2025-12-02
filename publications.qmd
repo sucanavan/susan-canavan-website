@@ -1,0 +1,39 @@
+---
+title: "Publications"
+---
+
+::: pub-info
+**About this list**
+
+*Data last refreshed:* 06 May 2025
+
+Bibliographic metadata (title, year, journal, type) comes from [ORCID](https://orcid.org/0000-0002-7972-7928). Citation counts are pulled from Google Scholar.
+:::
+
+```{r}
+#| echo: false
+
+library(DT)
+
+pubs <- read.csv("publications.csv")
+
+pubs_display <- pubs[, c("Year", "Authors", "Title", "Journal", "Citations")]
+
+pubs_display$Authors <- gsub(
+  "S Canavan",
+  "<strong>S Canavan</strong>",
+  pubs_display$Authors,
+  fixed = TRUE
+)
+
+datatable(
+  pubs_display,
+  escape = FALSE,
+  options = list(
+    pageLength = 15,
+    autoWidth = TRUE,
+    order = list(list(4, 'desc'))
+  ),
+  rownames = FALSE
+)
+```

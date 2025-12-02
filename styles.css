@@ -1,1 +1,218 @@
-/* css styles */
+/* Economist-inspired theme - based on their design system */
+
+/* Fonts - alternatives to Milo (serif) and Econ Sans */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Economist color palette */
+  --economist-red: #E3120B;
+  --economist-red-60: #F6423C;
+  
+  /* London greyscale */
+  --london-5: #0D0D0D;
+  --london-10: #1A1A1A;
+  --london-20: #333333;
+  --london-35: #595959;
+  --london-70: #B3B3B3;
+  --london-85: #D9D9D9;
+  --london-95: #F2F2F2;
+  --london-100: #FFFFFF;
+  
+  /* Canvas */
+  --los-angeles-95: #F5F4EF;
+}
+
+/* Body text - serif like Milo */
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--london-10);
+  background-color: var(--london-100);
+}
+
+/* Headings - sans-serif like Econ Sans */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-weight: 700;
+  color: var(--london-5);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.2em;
+  border-bottom: 3px solid var(--economist-red);
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: var(--london-10);
+}
+
+h3 {
+  font-size: 1.2em;
+  color: var(--london-20);
+}
+
+/* Links */
+a {
+  color: var(--economist-red);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar - dark with red accent */
+.navbar {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  background-color: var(--london-10) !important;
+  border-bottom: 3px solid var(--economist-red);
+  padding: 0.8em 1em;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3em;
+  color: var(--london-100) !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+  color: var(--london-100) !important;
+  padding: 0.5em 1em !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--economist-red-60) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--economist-red);
+  border-color: var(--economist-red);
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.5px;
+  padding: 0.6em 1.2em;
+}
+
+.btn-primary:hover {
+  background-color: #b30000;
+  border-color: #b30000;
+}
+
+/* Content width */
+.content {
+  max-width: 720px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 1.1em;
+  color: var(--london-35);
+  font-weight: 400;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--economist-red);
+  padding-left: 1em;
+  font-style: italic;
+  color: var(--london-35);
+}
+
+/* Remove TOC */
+#TOC {
+  display: none;
+}
+
+/* Clean rule/divider style */
+hr {
+  border: none;
+  border-top: 1px solid var(--london-85);
+  margin: 2em 0;
+}
+
+/* Publications page layout */
+.pub-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.toc-like {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 0.9em;
+  color: var(--london-35);
+  border-right: 1px solid var(--london-85);
+  padding-right: 1.5em;
+}
+
+.toc-like h4 {
+  font-size: 1em;
+  color: var(--london-20);
+  margin-top: 0;
+}
+
+.pub-table {
+  overflow-x: auto;
+}
+
+/* DataTable styling */
+.dataTables_wrapper {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 0.9em;
+}
+
+table.dataTable thead th {
+  background-color: var(--london-10);
+  color: var(--london-100);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+}
+
+table.dataTable tbody tr:hover {
+  background-color: var(--los-angeles-95) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pub-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .toc-like {
+    border-right: none;
+    border-bottom: 1px solid var(--london-85);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+/* Publications info box */
+.pub-info {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 0.9em;
+  color: var(--london-35);
+  background-color: var(--london-95);
+  border-left: 3px solid var(--economist-red);
+  padding: 1em 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.pub-info strong {
+  color: var(--london-20);
+}
