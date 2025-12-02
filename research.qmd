@@ -1,0 +1,37 @@
+---
+title: "Research Overview"
+---
+
+## Co-authorship Network
+
+This network illustrates my co-authorship patterns. Node size reflects publication count, and edge thickness shows the number of co-authored papers. Hover over nodes for details, and drag to explore.
+
+<iframe src="images/coauthorship_network.html" width="100%" height="700px" style="border:none;">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+## Key Themes
+
+### Invasion Pathways and Risk Assessment
+
+I study how invasive species are introduced and spread, and develop tools for horizon scanning and risk prioritization. This includes examining trade, tourism, and cultural pathways, and advising on management responses.
+
+------------------------------------------------------------------------
+
+### iEcology and Culturomics
+
+Using social media, search trends, and Wikipedia data, I analyze public attention to biodiversity issues. These digital signals provide early warnings and insights into societal awareness of species and environmental change.
+
+------------------------------------------------------------------------
+
+### Digital Conservation Tools
+
+I co-develop methods and open tools to monitor species distributions and detect emerging threats. These tools aim to support policymakers and improve public engagement with science.
+
+------------------------------------------------------------------------
+
+### Public Engagement with Biodiversity Loss
+
+My recent work examines how extinction is communicated online and how people respond emotionally to biodiversity loss. I explore how these reactions differ by taxon, geography, and platform.

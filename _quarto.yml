@@ -24,5 +24,9 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    page-layout: full
+    grid:
+      body-width: 1200px
+      margin-width: 100px
 
 editor: visual

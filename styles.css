@@ -216,3 +216,107 @@ table.dataTable tbody tr:hover {
 .pub-info strong {
   color: var(--london-20);
 }
+
+/* Publications page - side by side layout */
+.pub-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.pub-sidebar {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 0.85em;
+  color: var(--london-35);
+  border-right: 1px solid var(--london-85);
+  padding-right: 1.5em;
+}
+
+.pub-sidebar strong {
+  color: var(--london-20);
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.pub-table {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .pub-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .pub-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--london-85);
+    padding-bottom: 1em;
+    padding-right: 0;
+  }
+}
+
+/* Wider content area */
+.content {
+  max-width: 1400px;
+}
+
+main.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+/* DataTable full width */
+.pub-table {
+  width: 100%;
+}
+
+.pub-table .dataTables_wrapper {
+  width: 100%;
+}
+
+.pub-table table.dataTable {
+  width: 100% !important;
+}
+
+/* Column widths */
+.pub-table table.dataTable th:nth-child(1),
+.pub-table table.dataTable td:nth-child(1) {
+  width: 60px;  /* Year */
+}
+
+.pub-table table.dataTable th:nth-child(2),
+.pub-table table.dataTable td:nth-child(2) {
+  width: 200px;  /* Authors */
+}
+
+.pub-table table.dataTable th:nth-child(3),
+.pub-table table.dataTable td:nth-child(3) {
+  width: auto;  /* Title - takes remaining space */
+}
+
+.pub-table table.dataTable th:nth-child(4),
+.pub-table table.dataTable td:nth-child(4) {
+  width: 180px;  /* Journal */
+}
+
+.pub-table table.dataTable th:nth-child(5),
+.pub-table table.dataTable td:nth-child(5) {
+  width: 80px;  /* Citations */
+}
+
+/* Research page */
+.research-image {
+  width: 70%;
+  max-width: 900px;
+  margin: 1em auto;
+  display: block;
+}
+
+/* Horizontal rules */
+hr {
+  border: none;
+  border-top: 1px solid var(--london-85);
+  margin: 2em 0;
+}

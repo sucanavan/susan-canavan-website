@@ -2,14 +2,18 @@
 title: "Publications"
 ---
 
-::: pub-info
+::::: pub-layout
+::: pub-sidebar
 **About this list**
 
 *Data last refreshed:* 06 May 2025
 
-Bibliographic metadata (title, year, journal, type) comes from [ORCID](https://orcid.org/0000-0002-7972-7928). Citation counts are pulled from Google Scholar.
+Bibliographic metadata (title, year, journal, type) comes from [ORCID](https://orcid.org/0000-0002-7972-7928).
+
+Citation counts are pulled from Google Scholar.
 :::
 
+::: pub-table
 ```{r}
 #| echo: false
 
@@ -37,3 +41,5 @@ datatable(
   rownames = FALSE
 )
 ```
+:::
+:::::

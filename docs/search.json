@@ -14,10 +14,31 @@
     "text": "Hi, I’m Susan, an independent consultant specializing in biosecurity data analysis and invasive species research.\nI provide analytical services to research institutions and government agencies. I develop computational methods to detect and assess biological invasion risks, combining ecological expertise with data science. My consulting work focuses on analyzing large datasets, building predictive models, and creating automated monitoring systems that help make informed biosecurity decisions.\nContact Me"
   },
   {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research Overview",
+    "section": "",
+    "text": "This network illustrates my co-authorship patterns. Node size reflects publication count, and edge thickness shows the number of co-authored papers. Hover over nodes for details, and drag to explore."
+  },
+  {
+    "objectID": "research.html#co-authorship-network",
+    "href": "research.html#co-authorship-network",
+    "title": "Research Overview",
+    "section": "",
+    "text": "This network illustrates my co-authorship patterns. Node size reflects publication count, and edge thickness shows the number of co-authored papers. Hover over nodes for details, and drag to explore."
+  },
+  {
+    "objectID": "research.html#key-themes",
+    "href": "research.html#key-themes",
+    "title": "Research Overview",
+    "section": "Key Themes",
+    "text": "Key Themes\n\nInvasion Pathways and Risk Assessment\nI study how invasive species are introduced and spread, and develop tools for horizon scanning and risk prioritization. This includes examining trade, tourism, and cultural pathways, and advising on management responses.\n\n\n\niEcology and Culturomics\nUsing social media, search trends, and Wikipedia data, I analyze public attention to biodiversity issues. These digital signals provide early warnings and insights into societal awareness of species and environmental change.\n\n\n\nDigital Conservation Tools\nI co-develop methods and open tools to monitor species distributions and detect emerging threats. These tools aim to support policymakers and improve public engagement with science.\n\n\n\nPublic Engagement with Biodiversity Loss\nMy recent work examines how extinction is communicated online and how people respond emotionally to biodiversity loss. I explore how these reactions differ by taxon, geography, and platform."
+  },
+  {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "About this list\nData last refreshed: 06 May 2025\nBibliographic metadata (title, year, journal, type) comes from ORCID. Citation counts are pulled from Google Scholar."
+    "text": "About this list\nData last refreshed: 06 May 2025\nBibliographic metadata (title, year, journal, type) comes from ORCID.\nCitation counts are pulled from Google Scholar."
   }
 ]
