@@ -1,11 +1,10 @@
 ---
-title: "Website Canavan"
+title: "Susan Canavan"
+subtitle: "Biosecurity Data Analysis & Invasive Species Research"
 ---
 
-This is a Quarto website.
+Hi, I'm Susan, an independent consultant specializing in biosecurity data analysis and invasive species research.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I provide analytical services to research institutions and government agencies. I develop computational methods to detect and assess biological invasion risks, combining ecological expertise with data science. My consulting work focuses on analyzing large datasets, building predictive models, and creating automated monitoring systems that help make informed biosecurity decisions.
 
-```{r}
-1 + 1
-```
+[Contact Me](mailto:sucanavan@gmail.com){.btn .btn-primary}
