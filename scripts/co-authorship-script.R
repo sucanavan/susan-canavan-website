@@ -5,8 +5,9 @@ library(htmlwidgets)
 # Economist colors
 economist_red <- "#E3120B"
 economist_dark <- "#1A1A1A"
-economist_grey <- "#595959"
-economist_light <- "#D9D9D9"
+los_angeles_85 <- "#E1DFD0"
+los_angeles_90 <- "#EBE9E0"
+paris_85 <- "#D0E1E1"
 
 # Load publications
 pubs <- read.csv("publications.csv")
@@ -37,7 +38,7 @@ author_pubs <- pubs %>%
   count(Authors, name = "n_pubs") %>%
   rename(id = Authors)
 
-# Create nodes with Economist styling
+# Create nodes - no borders, large text
 nodes <- author_pubs %>%
   mutate(
     label = id,
@@ -47,47 +48,44 @@ nodes <- author_pubs %>%
     color.background = case_when(
       id == "S Canavan" ~ economist_red,
       n_pubs >= 5 ~ economist_dark,
-      n_pubs >= 3 ~ economist_grey,
-      TRUE ~ "#B3B3B3"
+      n_pubs >= 3 ~ paris_85,
+      TRUE ~ los_angeles_85
     ),
     color.border = case_when(
-      id == "S Canavan" ~ "#B30000",
-      TRUE ~ economist_dark
+      id == "S Canavan" ~ economist_red,
+      n_pubs >= 5 ~ economist_dark,
+      n_pubs >= 3 ~ paris_85,
+      TRUE ~ los_angeles_85
     ),
-    borderWidth = case_when(
-      id == "S Canavan" ~ 3,
-      TRUE ~ 1
-    ),
+    borderWidth = 0,
     font.size = case_when(
-      id == "S Canavan" ~ 22,
-      n_pubs >= 5 ~ 16,
-      n_pubs >= 3 ~ 14,
-      TRUE ~ 12
+      id == "S Canavan" ~ 40,
+      n_pubs >= 5 ~ 32,
+      n_pubs >= 3 ~ 26,
+      TRUE ~ 22
     ),
-    font.color = economist_dark,
-    font.face = "bold"
+    font.color = economist_dark
   )
 
 # Create edges
 edges_vis <- weighted_edges %>%
   mutate(
     width = weight * 1.5,
-    color = economist_light,
+    color = los_angeles_90,
     title = paste0("<span style='font-family: Arial;'>", weight, " co-authored papers</span>")
   )
 
-# Create network
-network <- visNetwork(nodes, edges_vis, width = "100%", height = "650px") %>%
+# Create network - spread out layout
+network <- visNetwork(nodes, edges_vis, width = "100%", height = "800px") %>%
   visNodes(
     shape = "dot",
-    scaling = list(min = 10, max = 40),
+    scaling = list(min = 15, max = 50),
     font = list(
       face = "Arial",
-      vadjust = -12,
+      vadjust = -20,
       strokeWidth = 3,
       strokeColor = "white"
-    ),
-    shadow = list(enabled = TRUE, size = 5, x = 2, y = 2)
+    )
   ) %>%
   visEdges(
     smooth = list(enabled = TRUE, type = "continuous"),
@@ -96,13 +94,13 @@ network <- visNetwork(nodes, edges_vis, width = "100%", height = "650px") %>%
   visPhysics(
     solver = "forceAtlas2Based",
     forceAtlas2Based = list(
-      gravitationalConstant = -80,
-      centralGravity = 0.015,
-      springLength = 120,
-      springConstant = 0.05,
+      gravitationalConstant = -300,
+      centralGravity = 0.003,
+      springLength = 300,
+      springConstant = 0.01,
       damping = 0.4
     ),
-    stabilization = list(iterations = 300)
+    stabilization = list(iterations = 500)
   ) %>%
   visInteraction(
     hover = TRUE,
