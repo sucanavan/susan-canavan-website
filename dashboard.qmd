@@ -1,0 +1,129 @@
+---
+title: "Research Dashboard"
+subtitle: "Publication metrics and collaboration patterns"
+---
+
+```{r}
+#| echo: false
+stats <- readRDS("data/dashboard_stats.rds")
+```
+
+::::::::::::::::::::: stats-row
+::::: stat-box
+::: stat-number
+`r stats$total_pubs`
+:::
+
+::: stat-label
+Publications
+:::
+:::::
+
+::::: stat-box
+::: stat-number
+`r stats$n_articles`
+:::
+
+::: stat-label
+Journal articles
+:::
+:::::
+
+::::: stat-box
+::: stat-number
+`r stats$total_collaborators`
+:::
+
+::: stat-label
+Co-authors
+:::
+:::::
+
+::::: stat-box
+::: stat-number
+`r stats$total_countries`
+:::
+
+::: stat-label
+Countries
+:::
+:::::
+
+::::: stat-box
+::: stat-number
+`r stats$oa_pct`%
+:::
+
+::: stat-label
+Open access
+:::
+:::::
+
+::::: stat-box
+::: stat-number
+`r stats$years_active`
+:::
+
+::: stat-label
+Years active
+:::
+:::::
+:::::::::::::::::::::
+
+::: dashboard-intro
+Data from [OpenAlex](https://openalex.org/) via ORCID [0000-0002-7972-7928](https://orcid.org/0000-0002-7972-7928).
+:::
+
+------------------------------------------------------------------------
+
+## Global Collaboration Network
+
+<iframe src="images/plot_world_map.html" width="100%" height="420px" style="border:none;">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+:::::: dashboard-row-three
+::: dashboard-third
+### Publications per Year
+
+<iframe src="images/plot_publications_year.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+:::
+
+::: dashboard-third
+### Open Access
+
+<iframe src="images/plot_open_access.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+:::
+
+::: dashboard-third
+### Top Journals
+
+<iframe src="images/plot_journals.html" width="100%" height="300px" style="border:none;">
+
+</iframe>
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Top Co-authors
+
+<iframe src="images/plot_coauthors.html" width="100%" height="380px" style="border:none;">
+
+</iframe>
+
+------------------------------------------------------------------------
+
+## Co-authorship Network
+
+[![Click to view full size](images/coauthorship_network.png){width="100%"}](images/coauthorship_network.png)
+
+::: figure-caption
+Node size reflects publication count. Colors indicate country affiliation. Click to open full size.
+:::

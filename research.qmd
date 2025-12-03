@@ -26,10 +26,8 @@ My recent work examines how extinction is communicated online and how people res
 ::: research-network
 ## Co-authorship Network
 
-<iframe src="images/coauthorship_network.html" width="100%" height="800px" style="border:none;">
+[![Click to view full size](images/coauthorship_network.png){width="100%"}](images/coauthorship_network.png)
 
-</iframe>
-
-*Hover over nodes for details. Drag to explore.*
+*Click image to open full size in new tab. Colors indicate country affiliation. Data from OpenAlex.*
 :::
 :::::

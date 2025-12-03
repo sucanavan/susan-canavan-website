@@ -12,6 +12,8 @@ website:
         text: About
       - href: research.qmd
         text: Research
+      - href: dashboard.qmd
+        text: Dashboard
       - href: publications.qmd
         text: Publications
       - href: media.qmd

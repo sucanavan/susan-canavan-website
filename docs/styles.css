@@ -362,3 +362,156 @@ hr {
     grid-template-columns: 1fr;
   }
 }
+
+/* Research page - side by side layout */
+.research-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 3em;
+  margin-top: 1em;
+}
+
+.research-themes {
+  font-size: 0.95em;
+}
+
+.research-themes h2 {
+  margin-top: 0;
+}
+
+.research-themes h3 {
+  font-size: 1.1em;
+  color: var(--economist-red);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.research-themes p {
+  color: var(--london-35);
+  line-height: 1.6;
+}
+
+.research-network {
+  min-width: 0;
+}
+
+.research-network h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+  .research-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dashboard layout - Economist style */
+.dashboard-intro {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 0.85em;
+  color: var(--london-35);
+  margin-bottom: 1.5em;
+}
+
+.dashboard-row-three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5em;
+  margin: 1.5em 0;
+}
+
+.dashboard-third {
+  min-width: 0;
+}
+
+.dashboard-third h3 {
+  font-size: 0.95em;
+  margin: 0 0 0.5em 0;
+  color: var(--london-20);
+  border-bottom: 2px solid var(--economist-red);
+  padding-bottom: 0.3em;
+}
+
+.dashboard-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+  margin: 1.5em 0;
+}
+
+.dashboard-half {
+  min-width: 0;
+}
+
+.dashboard-half h2,
+.dashboard-half h3 {
+  font-size: 0.95em;
+  margin: 0 0 0.5em 0;
+  color: var(--london-20);
+  border-bottom: 2px solid var(--economist-red);
+  padding-bottom: 0.3em;
+}
+
+.figure-caption {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 0.8em;
+  color: var(--london-35);
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+@media (max-width: 900px) {
+  .dashboard-row-three {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dashboard statistics - Economist style */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1em;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid var(--london-85);
+}
+
+.stat-box {
+  text-align: center;
+  padding: 1em 0.5em;
+  background-color: var(--london-95);
+  border-top: 3px solid var(--economist-red);
+}
+
+.stat-number {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  color: var(--london-10);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--london-35);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.3em;
+}
+
+@media (max-width: 900px) {
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
